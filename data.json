@@ -2,18 +2,18 @@
   "cast": [
     {
       "id": "c1",
-      "role": "민수 (주인공)",
-      "name": "배우A"
+      "role": "운전자",
+      "name": "유영은"
     },
     {
       "id": "c2",
-      "role": "지은",
-      "name": "배우B"
+      "role": "전도대상자1",
+      "name": "김지영"
     },
     {
       "id": "c3",
-      "role": "목사님",
-      "name": "배우C"
+      "role": "전도대상자2",
+      "name": "공민주"
     }
   ],
   "staff": [
@@ -188,7 +188,7 @@
     }
   ],
   "links": {
-    "script": "",
+    "script": "https://docs.google.com/document/d/1TavV94OpSxgr0Go9hgXWlhUTURh1w82odnJNB4DlFyc/edit?usp=drive_link",
     "storyboard": ""
   }
 }
