@@ -145,14 +145,14 @@
         "s2"
       ],
       "extra": "보조 출연 3명",
-      "memo": "12:30까지 로비 집합. 의상은 각자 준비해 주세요.",
+      "memo": "13:40까지 1층 로비 집합. 의상은 각자 준비해 주세요.",
       "scenes": [
         {
           "id": "sc1",
           "time": "14:00",
           "no": "S#1",
           "title": "집 앞",
-          "desc": "전도대상자 픽업 및 일꾼 등장",
+          "desc": "전도대상자 픽업",
           "cast": [
             "c1",
             "c2"
@@ -202,38 +202,71 @@
           "id": "sc2",
           "time": "15:00",
           "no": "S#2",
-          "title": "식당 대화",
-          "desc": "교회 식당에서 함께 식사하며 대화한다.",
+          "title": "집 앞",
+          "desc": "차내 출발",
           "cast": [
             "c1",
+            "c2"
+          ],
+          "images": [],
+          "location": "연대 기숙사 앞",
+          "props": []
+        },
+        {
+          "id": "wkvijzo",
+          "time": "15:30",
+          "no": "S#3",
+          "title": "주행",
+          "desc": "차가 잘나가",
+          "location": "연대 기숙사 방향 거리",
+          "cast": [
+            "c1",
+            "c2"
+          ],
+          "props": [],
+          "images": []
+        },
+        {
+          "id": "vlqjycm",
+          "time": "16:00",
+          "no": "S#4",
+          "title": "도로 (급커브 / 제동 구간)",
+          "desc": "경사가 심하다...",
+          "location": "연대 기숙사 방향 거리",
+          "cast": [
+            "c1",
+            "c2"
+          ],
+          "props": [],
+          "images": []
+        },
+        {
+          "id": "8qkdl6l",
+          "time": "16:30",
+          "no": "S#6",
+          "title": "다음날 다시 도로 (깡패 만남)",
+          "desc": "집회 소감",
+          "location": "연희교차로 방향 미용실 앞",
+          "cast": [
+            "c1",
+            "c2"
+          ],
+          "props": [],
+          "images": []
+        },
+        {
+          "id": "s489sct",
+          "time": "17:00",
+          "no": "S#8",
+          "title": "다시 교회 (결말)",
+          "desc": "새로운 전도",
+          "location": "서울서부 근처 빌라 건물",
+          "cast": [
             "c2",
             "c3"
           ],
-          "images": [
-            {
-              "src": "images/sample/s2-1.svg",
-              "cap": "오버숄더"
-            },
-            {
-              "src": "images/sample/s2-2.svg",
-              "cap": "리액션"
-            }
-          ],
-          "location": "교회 식당 (1층)",
-          "props": [
-            {
-              "id": "i5",
-              "name": "식판 2개, 수저",
-              "owner": "",
-              "done": false
-            },
-            {
-              "id": "i6",
-              "name": "테이블 꽃",
-              "owner": "배우B",
-              "done": true
-            }
-          ]
+          "props": [],
+          "images": []
         }
       ],
       "supplies": [
