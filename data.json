@@ -136,13 +136,14 @@
       "title": "촬영 1",
       "start": "13:00",
       "end": "17:00",
-      "location": "서울서부교회당",
       "people": [
         "c1",
         "c2",
         "c3",
         "s1",
         "s2",
+        "koco5ci",
+        "9kegp5a",
         "9engu74"
       ],
       "extra": "",
@@ -196,14 +197,9 @@
               "cap": "1-9"
             }
           ],
-          "location": "연대 기숙사 앞",
-          "props": [
-            {
-              "id": "i4",
-              "name": "차량",
-              "owner": "김명준",
-              "done": false
-            }
+          "locationId": "loc-jjzlm6",
+          "items": [
+            "it-1jxrtdp"
           ]
         },
         {
@@ -230,14 +226,9 @@
               "cap": "2-27"
             }
           ],
-          "location": "연대 기숙사 앞",
-          "props": [
-            {
-              "id": "rwum7xm",
-              "name": "차량",
-              "owner": "김명준",
-              "done": false
-            }
+          "locationId": "loc-jjzlm6",
+          "items": [
+            "it-1jxrtdp"
           ]
         },
         {
@@ -246,18 +237,9 @@
           "no": "S#3",
           "title": "주행",
           "desc": "차가 잘나가",
-          "location": "연대 기숙사 방향 거리",
           "cast": [
             "c1",
             "c2"
-          ],
-          "props": [
-            {
-              "id": "aazk98a",
-              "name": "차량",
-              "owner": "김명준",
-              "done": false
-            }
           ],
           "images": [
             {
@@ -272,6 +254,10 @@
               "src": "images/scenes/1795065262266-gnmr9gn.jpg",
               "cap": "3-3"
             }
+          ],
+          "locationId": "loc-v8twxs",
+          "items": [
+            "it-1jxrtdp"
           ]
         },
         {
@@ -280,18 +266,9 @@
           "no": "S#4",
           "title": "도로 (급커브 / 제동 구간)",
           "desc": "경사가 심하다...",
-          "location": "연대 기숙사 방향 거리",
           "cast": [
             "c1",
             "c2"
-          ],
-          "props": [
-            {
-              "id": "i6g7cq0",
-              "name": "차량",
-              "owner": "김명준",
-              "done": false
-            }
           ],
           "images": [
             {
@@ -306,6 +283,10 @@
               "src": "images/scenes/1795065310692-ja6aiaj.jpg",
               "cap": "4-6"
             }
+          ],
+          "locationId": "loc-v8twxs",
+          "items": [
+            "it-1jxrtdp"
           ]
         },
         {
@@ -314,18 +295,9 @@
           "no": "S#6",
           "title": "다음날 다시 도로 (깡패 만남)",
           "desc": "집회 소감",
-          "location": "연희교차로 방향 미용실 앞",
           "cast": [
             "c1",
             "c2"
-          ],
-          "props": [
-            {
-              "id": "d3hcxsy",
-              "name": "차량",
-              "owner": "김명준",
-              "done": false
-            }
           ],
           "images": [
             {
@@ -344,6 +316,10 @@
               "src": "images/scenes/1795065484258-px41tis.jpg",
               "cap": "6-4"
             }
+          ],
+          "locationId": "loc-1w7ow62",
+          "items": [
+            "it-1jxrtdp"
           ]
         },
         {
@@ -352,18 +328,9 @@
           "no": "S#8",
           "title": "다시 교회 (결말)",
           "desc": "새로운 전도",
-          "location": "서울서부 근처 빌라 건물",
           "cast": [
             "c2",
             "c3"
-          ],
-          "props": [
-            {
-              "id": "q11g58b",
-              "name": "차량",
-              "owner": "손종현",
-              "done": false
-            }
           ],
           "images": [
             {
@@ -386,6 +353,10 @@
               "src": "images/scenes/1795065534434-isg9trd.jpg",
               "cap": "8-5"
             }
+          ],
+          "locationId": "loc-1gq9qw1",
+          "items": [
+            "it-1jjji5l"
           ]
         },
         {
@@ -394,18 +365,9 @@
           "no": "S#5",
           "title": "주차된 차 (말씀 시간)",
           "desc": "말씀 듣는 전도대상자",
-          "location": "3층 소강당",
           "cast": [
             "c1",
             "c2"
-          ],
-          "props": [
-            {
-              "id": "hfs8fj8",
-              "name": "차량",
-              "owner": "김명준",
-              "done": false
-            }
           ],
           "images": [
             {
@@ -416,64 +378,23 @@
               "src": "images/scenes/1795065413231-47t3tob.jpg",
               "cap": "5-2"
             }
+          ],
+          "locationId": "loc-bolgg3",
+          "items": [
+            "it-1jxrtdp"
           ]
         }
       ],
-      "supplies": [
-        {
-          "id": "i1",
-          "name": "카메라",
-          "owner": "정혜성",
-          "done": true
-        },
-        {
-          "id": "i2",
-          "name": "삼각대",
-          "owner": "정혜성",
-          "done": false
-        },
-        {
-          "id": "i3",
-          "name": "마이크",
-          "owner": "미선부 대여",
-          "done": false
-        },
-        {
-          "id": "cokwknc",
-          "name": "카메라",
-          "owner": "미선부 대여",
-          "done": false
-        },
-        {
-          "id": "mpluibu",
-          "name": "초록 배경",
-          "owner": "미선부 대여",
-          "done": false
-        },
-        {
-          "id": "5sunbzx",
-          "name": "짐벌",
-          "owner": "정혜성",
-          "done": false
-        }
+      "done": {},
+      "locationId": "loc-deyym0",
+      "items": [
+        "it-i9od",
+        "it-1d0y3zw",
+        "it-30wf7h",
+        "it-1tbq2ep",
+        "it-jlxqj9",
+        "it-1noh68t"
       ]
-    },
-    {
-      "id": "e2",
-      "date": "2026-11-28",
-      "type": "편집",
-      "title": "1차 가편집 (예시)",
-      "start": "19:00",
-      "end": "22:00",
-      "location": "미디어실",
-      "people": [
-        "s1",
-        "s4"
-      ],
-      "extra": "",
-      "memo": "",
-      "scenes": [],
-      "supplies": []
     },
     {
       "id": "e3",
@@ -482,7 +403,6 @@
       "title": "촬영 4 (필요시)",
       "start": "14:00",
       "end": "18:00",
-      "location": "서울서부 교회당",
       "people": [
         "s1",
         "s2"
@@ -490,7 +410,9 @@
       "extra": "",
       "memo": "",
       "scenes": [],
-      "supplies": []
+      "done": {},
+      "locationId": "loc-deyym0",
+      "items": []
     },
     {
       "id": "ikdnwxr",
@@ -499,7 +421,6 @@
       "title": "촬영 2",
       "start": "19:00",
       "end": "22:00",
-      "location": "서울서부교회당",
       "people": [
         "y73qic9",
         "gmbnk1k",
@@ -511,8 +432,10 @@
       ],
       "extra": "",
       "memo": "",
-      "supplies": [],
-      "scenes": []
+      "scenes": [],
+      "done": {},
+      "locationId": "loc-deyym0",
+      "items": []
     },
     {
       "id": "6d9g7ky",
@@ -521,7 +444,6 @@
       "title": "촬영 3",
       "start": "07:00",
       "end": "16:00",
-      "location": "서울서부교회당",
       "people": [
         "h3d3owb",
         "y73qic9",
@@ -541,12 +463,121 @@
       ],
       "extra": "",
       "memo": "",
-      "supplies": [],
-      "scenes": []
+      "scenes": [],
+      "done": {},
+      "locationId": "loc-deyym0",
+      "items": []
     }
   ],
   "links": {
     "script": "https://docs.google.com/document/d/1TavV94OpSxgr0Go9hgXWlhUTURh1w82odnJNB4DlFyc/edit?usp=drive_link",
     "storyboard": "https://docs.google.com/presentation/d/1Uk0bjt2NbYaHksiirJ_klUgSv1d_PK461tabQrfYeRQ/edit?usp=drive_link"
-  }
+  },
+  "locations": [
+    {
+      "id": "loc-deyym0",
+      "name": "서울서부교회당",
+      "address": "",
+      "lat": "",
+      "lng": "",
+      "memo": "",
+      "photos": []
+    },
+    {
+      "id": "loc-jjzlm6",
+      "name": "연대 기숙사 앞",
+      "address": "",
+      "lat": "",
+      "lng": "",
+      "memo": "",
+      "photos": []
+    },
+    {
+      "id": "loc-v8twxs",
+      "name": "연대 기숙사 방향 거리",
+      "address": "",
+      "lat": "",
+      "lng": "",
+      "memo": "",
+      "photos": []
+    },
+    {
+      "id": "loc-1w7ow62",
+      "name": "연희교차로 방향 미용실 앞",
+      "address": "",
+      "lat": "",
+      "lng": "",
+      "memo": "",
+      "photos": []
+    },
+    {
+      "id": "loc-1gq9qw1",
+      "name": "서울서부 근처 빌라 건물",
+      "address": "",
+      "lat": "",
+      "lng": "",
+      "memo": "",
+      "photos": []
+    },
+    {
+      "id": "loc-bolgg3",
+      "name": "3층 소강당",
+      "address": "",
+      "lat": "",
+      "lng": "",
+      "memo": "",
+      "photos": []
+    },
+    {
+      "id": "loc-8kty2h",
+      "name": "미디어실",
+      "address": "",
+      "lat": "",
+      "lng": "",
+      "memo": "",
+      "photos": []
+    }
+  ],
+  "items": [
+    {
+      "id": "it-i9od",
+      "name": "카메라",
+      "owner": "정혜성"
+    },
+    {
+      "id": "it-1d0y3zw",
+      "name": "삼각대",
+      "owner": "정혜성"
+    },
+    {
+      "id": "it-30wf7h",
+      "name": "마이크",
+      "owner": "미선부 대여"
+    },
+    {
+      "id": "it-1tbq2ep",
+      "name": "카메라",
+      "owner": "미선부 대여"
+    },
+    {
+      "id": "it-jlxqj9",
+      "name": "초록 배경",
+      "owner": "미선부 대여"
+    },
+    {
+      "id": "it-1noh68t",
+      "name": "짐벌",
+      "owner": "정혜성"
+    },
+    {
+      "id": "it-1jxrtdp",
+      "name": "차량",
+      "owner": "김명준"
+    },
+    {
+      "id": "it-1jjji5l",
+      "name": "차량",
+      "owner": "손종현"
+    }
+  ]
 }
