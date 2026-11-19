@@ -1,0 +1,194 @@
+{
+  "cast": [
+    {
+      "id": "c1",
+      "role": "민수 (주인공)",
+      "name": "배우A"
+    },
+    {
+      "id": "c2",
+      "role": "지은",
+      "name": "배우B"
+    },
+    {
+      "id": "c3",
+      "role": "목사님",
+      "name": "배우C"
+    }
+  ],
+  "staff": [
+    {
+      "id": "s1",
+      "role": "감독",
+      "name": "스태프A"
+    },
+    {
+      "id": "s2",
+      "role": "촬영",
+      "name": "스태프B"
+    },
+    {
+      "id": "s3",
+      "role": "음향",
+      "name": "스태프C"
+    },
+    {
+      "id": "s4",
+      "role": "편집",
+      "name": "스태프D"
+    }
+  ],
+  "events": [
+    {
+      "id": "e1",
+      "date": "2026-11-22",
+      "type": "촬영",
+      "title": "1차 본촬영 (예시)",
+      "start": "13:00",
+      "end": "17:00",
+      "location": "본당 로비",
+      "people": [
+        "c1",
+        "c2",
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "extra": "보조 출연 3명",
+      "memo": "12:30까지 로비 집합. 의상은 각자 준비해 주세요.",
+      "scenes": [
+        {
+          "id": "sc1",
+          "time": "13:30",
+          "no": "S#1",
+          "title": "로비에서의 첫 만남",
+          "desc": "예배 후 로비에서 민수와 지은이 처음 인사한다.",
+          "cast": [
+            "c1",
+            "c2"
+          ],
+          "images": [
+            {
+              "src": "images/sample/s1-1.svg",
+              "cap": "와이드 — 로비 전경"
+            },
+            {
+              "src": "images/sample/s1-2.svg",
+              "cap": "미디엄 — 인사"
+            },
+            {
+              "src": "images/sample/s1-3.svg",
+              "cap": "클로즈업"
+            }
+          ],
+          "location": "",
+          "props": [
+            {
+              "id": "i4",
+              "name": "주보 10부",
+              "owner": "",
+              "done": false
+            }
+          ]
+        },
+        {
+          "id": "sc2",
+          "time": "15:00",
+          "no": "S#2",
+          "title": "식당 대화",
+          "desc": "교회 식당에서 함께 식사하며 대화한다.",
+          "cast": [
+            "c1",
+            "c2",
+            "c3"
+          ],
+          "images": [
+            {
+              "src": "images/sample/s2-1.svg",
+              "cap": "오버숄더"
+            },
+            {
+              "src": "images/sample/s2-2.svg",
+              "cap": "리액션"
+            }
+          ],
+          "location": "교회 식당 (1층)",
+          "props": [
+            {
+              "id": "i5",
+              "name": "식판 2개, 수저",
+              "owner": "",
+              "done": false
+            },
+            {
+              "id": "i6",
+              "name": "테이블 꽃",
+              "owner": "배우B",
+              "done": true
+            }
+          ]
+        }
+      ],
+      "supplies": [
+        {
+          "id": "i1",
+          "name": "카메라 + 배터리 3개",
+          "owner": "스태프B",
+          "done": true
+        },
+        {
+          "id": "i2",
+          "name": "삼각대 2개",
+          "owner": "스태프B",
+          "done": false
+        },
+        {
+          "id": "i3",
+          "name": "무선 마이크",
+          "owner": "스태프C",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "e2",
+      "date": "2026-11-28",
+      "type": "편집",
+      "title": "1차 가편집 (예시)",
+      "start": "19:00",
+      "end": "22:00",
+      "location": "미디어실",
+      "people": [
+        "s1",
+        "s4"
+      ],
+      "extra": "",
+      "memo": "",
+      "scenes": [],
+      "supplies": []
+    },
+    {
+      "id": "e3",
+      "date": "2026-12-06",
+      "type": "촬영",
+      "title": "2차 촬영 (예시)",
+      "start": "14:00",
+      "end": "18:00",
+      "location": "교육관 3층",
+      "people": [
+        "c1",
+        "c3",
+        "s1",
+        "s2"
+      ],
+      "extra": "",
+      "memo": "",
+      "scenes": [],
+      "supplies": []
+    }
+  ],
+  "links": {
+    "script": "",
+    "storyboard": ""
+  }
+}
