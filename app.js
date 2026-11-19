@@ -275,12 +275,37 @@ async function save() {
     const r = await gh('/contents/data.json', { method: 'PUT', body: JSON.stringify(body) });
     state.sha = r.content.sha;
     state.dirty = false;
-    toast('저장했습니다. 사이트에 반영되기까지 1~2분 걸릴 수 있습니다.', 4000);
+    render();
+    toast('저장했습니다. 사이트에 반영되기까지 1~5분 걸릴 수 있습니다.', 5000);
   } catch (e) {
-    if (e.status === 409 || e.status === 422) toast('다른 곳에서 먼저 수정되었습니다. 나가기 후 다시 로그인해 주세요.', 5000);
-    else toast(`저장하지 못했습니다: ${e.message}`, 5000);
+    render();
+    showSaveError(e);
   }
-  render();
+}
+
+function showSaveError(e) {
+  const reasons = {
+    401: ['토큰이 올바르지 않거나 만료되었습니다.', '‘나가기’ 후 토큰을 새로 만들어 다시 로그인해 주세요.'],
+    403: ['토큰에 저장(쓰기) 권한이 없습니다.',
+      'GitHub → Settings → Developer settings → Fine-grained tokens에서 이 토큰을 열고, Repository permissions의 <b>Contents</b>를 <b>Read and write</b>로 바꾼 뒤 저장해 주세요. 그다음 다시 ‘저장’을 누르면 됩니다.'],
+    404: ['저장소를 찾을 수 없습니다.', '토큰을 만들 때 <b>Only select repositories</b>에서 이 저장소를 선택했는지 확인해 주세요.'],
+    409: ['다른 곳에서 먼저 수정되었습니다.', '지금 고친 내용을 메모해 두고, ‘나가기’ 후 다시 로그인해서 고쳐 주세요.'],
+    422: ['다른 곳에서 먼저 수정되었습니다.', '지금 고친 내용을 메모해 두고, ‘나가기’ 후 다시 로그인해서 고쳐 주세요.'],
+  };
+  const [title, fix] = reasons[e.status] || (e.status
+    ? ['저장하지 못했습니다.', '잠시 후 다시 ‘저장’을 눌러 주세요.']
+    : ['인터넷 연결을 확인해 주세요.', '연결된 뒤 다시 ‘저장’을 눌러 주세요.']);
+  openModal(`
+    <div class="m-head"><h2>⚠️ ${title}</h2><button type="button" class="icon-btn" data-act="close-modal" aria-label="닫기">✕</button></div>
+    <div class="m-body">
+      <p style="margin:0">${fix}</p>
+      <p class="hint">수정한 내용은 아직 이 화면에 남아 있습니다. 창을 닫지 마세요.</p>
+      <p class="hint">GitHub 응답: ${e.status || '-'} ${esc(e.message)}</p>
+    </div>
+    <div class="m-foot">
+      <button type="button" class="btn" data-act="download-json">data.json 내려받기 (백업)</button>
+      <button type="button" class="btn primary" data-act="close-modal">확인</button>
+    </div>`);
 }
 
 function downloadJson() {
@@ -290,7 +315,20 @@ function downloadJson() {
   a.download = 'data.json';
   a.click();
   setTimeout(() => URL.revokeObjectURL(a.href), 1000);
-  toast('data.json을 내려받았습니다. 저장소의 같은 파일을 이것으로 바꿔 올려 주세요.', 4500);
+  if (state.localOnly) {
+    state.dirty = false; // 내려받은 파일이 곧 저장본
+    render();
+    openModal(`
+      <div class="m-head"><h2>data.json을 내려받았습니다</h2><button type="button" class="icon-btn" data-act="close-modal" aria-label="닫기">✕</button></div>
+      <div class="m-body">
+        <p style="margin:0"><b>지금은 ‘임시 편집’ 모드라서 사이트에는 아직 반영되지 않았습니다.</b></p>
+        <p style="margin:0">GitHub 저장소에서 <b>Add file → Upload files</b>로 방금 받은 data.json을 올리면 반영됩니다.</p>
+        <p class="hint">바로 저장되게 하려면 ‘나가기’ 후 ✎ 수정에서 GitHub 토큰으로 로그인해 주세요.</p>
+      </div>
+      <div class="m-foot"><button type="button" class="btn primary" data-act="close-modal">확인</button></div>`);
+  } else {
+    toast('백업용 data.json을 내려받았습니다.');
+  }
 }
 
 function compress(file, max = 1600, q = 0.85) {
@@ -365,7 +403,7 @@ function topbarHTML() {
        ${state.admin ? `<button class="btn" data-act="set-link">링크 설정</button>` : ''}`
     : '';
   const right = docTools + (state.admin
-    ? `<span class="mode admin">${state.localOnly ? '임시 편집' : '관리자'}</span>
+    ? `<span class="mode admin">${state.localOnly ? '임시 편집 · 사이트 저장 안 됨' : '관리자'}</span>
        <button class="btn primary" data-act="save" ${state.dirty || state.localOnly ? '' : 'disabled'}>${state.localOnly ? 'data.json 받기' : '저장'}</button>
        <button class="btn" data-act="logout">나가기</button>`
     : `<span class="mode">보기 전용</span>
@@ -895,6 +933,7 @@ document.addEventListener('click', async (e) => {
       case 'close-day': state.openDate = null; renderDrawer(); break;
       case 'close-viewer': state.viewer = null; renderViewer(); break;
       case 'close-modal': closeModal(); break;
+      case 'download-json': downloadJson(); break;
       case 'set-link': openLinkModal(state.view); break;
       case 'local-edit':
         state.admin = true; state.localOnly = true; state.gh = null;
