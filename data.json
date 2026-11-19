@@ -401,7 +401,9 @@
         "it-30wf7h",
         "it-1tbq2ep",
         "it-jlxqj9",
-        "it-1noh68t"
+        "it-1noh68t",
+        "nq7tb7e",
+        "9ihj4ir"
       ]
     },
     {
@@ -550,7 +552,15 @@
       ],
       "done": {},
       "locationId": "loc-deyym0",
-      "items": []
+      "items": [
+        "it-i9od",
+        "it-1d0y3zw",
+        "it-30wf7h",
+        "it-1tbq2ep",
+        "it-1noh68t",
+        "nq7tb7e",
+        "9ihj4ir"
+      ]
     },
     {
       "id": "6d9g7ky",
@@ -992,7 +1002,8 @@
           ],
           "items": [
             "it-1jxrtdp",
-            "c0kzeur"
+            "c0kzeur",
+            "8vscgje"
           ],
           "images": [
             {
@@ -1149,7 +1160,9 @@
         "it-30wf7h",
         "it-1tbq2ep",
         "it-jlxqj9",
-        "it-1noh68t"
+        "it-1noh68t",
+        "nq7tb7e",
+        "9ihj4ir"
       ]
     }
   ],
@@ -1264,18 +1277,33 @@
     },
     {
       "id": "it-1jxrtdp",
-      "name": "차량",
+      "name": "차량1",
       "owner": "김명준"
     },
     {
       "id": "it-1jjji5l",
-      "name": "차량",
+      "name": "차량2",
       "owner": "손종현"
     },
     {
       "id": "c0kzeur",
-      "name": "차량",
+      "name": "차량3",
       "owner": "김명찬"
+    },
+    {
+      "id": "nq7tb7e",
+      "name": "조명",
+      "owner": "미선부 대여"
+    },
+    {
+      "id": "9ihj4ir",
+      "name": "반사판",
+      "owner": "미선부 대여"
+    },
+    {
+      "id": "8vscgje",
+      "name": "막대사탕",
+      "owner": "유영진"
     }
   ]
 }
