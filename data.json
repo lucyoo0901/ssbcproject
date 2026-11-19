@@ -142,8 +142,7 @@
         "c2",
         "c3",
         "s1",
-        "s2",
-        "s3"
+        "s2"
       ],
       "extra": "보조 출연 3명",
       "memo": "12:30까지 로비 집합. 의상은 각자 준비해 주세요.",
@@ -274,10 +273,62 @@
       "memo": "",
       "scenes": [],
       "supplies": []
+    },
+    {
+      "id": "ikdnwxr",
+      "date": "2026-11-30",
+      "type": "촬영",
+      "title": "촬영 2",
+      "start": "19:00",
+      "end": "22:00",
+      "location": "서울서부교회당",
+      "people": [
+        "y73qic9",
+        "gmbnk1k",
+        "eyur6f3",
+        "jg0sjz0",
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "extra": "",
+      "memo": "",
+      "supplies": [],
+      "scenes": []
+    },
+    {
+      "id": "6d9g7ky",
+      "date": "2026-12-05",
+      "type": "촬영",
+      "title": "촬영 3",
+      "start": "07:00",
+      "end": "16:00",
+      "location": "서울서부교회당",
+      "people": [
+        "h3d3owb",
+        "y73qic9",
+        "gmbnk1k",
+        "nbbmnt6",
+        "2f20hrl",
+        "eyur6f3",
+        "jg0sjz0",
+        "gekser6",
+        "clnsmst",
+        "og8w1kt",
+        "sht50jc",
+        "x6ybogr",
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "extra": "",
+      "memo": "",
+      "supplies": [],
+      "scenes": []
     }
   ],
   "links": {
     "script": "https://docs.google.com/document/d/1TavV94OpSxgr0Go9hgXWlhUTURh1w82odnJNB4DlFyc/edit?usp=drive_link",
-    "storyboard": ""
+    "storyboard": "https://docs.google.com/presentation/d/1Uk0bjt2NbYaHksiirJ_klUgSv1d_PK461tabQrfYeRQ/edit?usp=drive_link"
   }
 }
