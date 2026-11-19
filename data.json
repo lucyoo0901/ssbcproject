@@ -157,7 +157,44 @@
             "c1",
             "c2"
           ],
-          "images": [],
+          "images": [
+            {
+              "src": "images/scenes/1795065066400-glvmqmi.jpg",
+              "cap": "1-1"
+            },
+            {
+              "src": "images/scenes/1795065067792-pxn7yzb.jpg",
+              "cap": "1-2"
+            },
+            {
+              "src": "images/scenes/1795065163431-ziytmt6.jpg",
+              "cap": "1-3"
+            },
+            {
+              "src": "images/scenes/1795065069479-8m0t6tv.jpg",
+              "cap": "1-4"
+            },
+            {
+              "src": "images/scenes/1795065076321-t92rk05.jpg",
+              "cap": "1-5"
+            },
+            {
+              "src": "images/scenes/1795065070913-tsxm7ul.jpg",
+              "cap": "1-6"
+            },
+            {
+              "src": "images/scenes/1795065073584-jb86zuc.jpg",
+              "cap": "1-7"
+            },
+            {
+              "src": "images/scenes/1795065072268-yb25gtq.jpg",
+              "cap": "1-8"
+            },
+            {
+              "src": "images/scenes/1795065075027-wohsdg0.jpg",
+              "cap": "1-9"
+            }
+          ],
           "location": "연대 기숙사 앞",
           "props": [
             {
@@ -208,7 +245,20 @@
             "c1",
             "c2"
           ],
-          "images": [],
+          "images": [
+            {
+              "src": "images/scenes/1795065201797-0orprxc.jpg",
+              "cap": "2-25"
+            },
+            {
+              "src": "images/scenes/1795065203132-dldi0li.jpg",
+              "cap": "2-26"
+            },
+            {
+              "src": "images/scenes/1795065204603-09vsmqi.jpg",
+              "cap": "2-27"
+            }
+          ],
           "location": "연대 기숙사 앞",
           "props": []
         },
@@ -224,7 +274,20 @@
             "c2"
           ],
           "props": [],
-          "images": []
+          "images": [
+            {
+              "src": "images/scenes/1795065261098-jhkxh4j.jpg",
+              "cap": "3-1"
+            },
+            {
+              "src": "images/scenes/1795065263687-xxxr8g5.jpg",
+              "cap": "3-2"
+            },
+            {
+              "src": "images/scenes/1795065262266-gnmr9gn.jpg",
+              "cap": "3-3"
+            }
+          ]
         },
         {
           "id": "vlqjycm",
@@ -238,7 +301,20 @@
             "c2"
           ],
           "props": [],
-          "images": []
+          "images": [
+            {
+              "src": "images/scenes/1795065311887-29dsoqv.jpg",
+              "cap": "4-4"
+            },
+            {
+              "src": "images/scenes/1795065313051-l4wck6w.jpg",
+              "cap": "4-5"
+            },
+            {
+              "src": "images/scenes/1795065310692-ja6aiaj.jpg",
+              "cap": "4-6"
+            }
+          ]
         },
         {
           "id": "8qkdl6l",
@@ -252,7 +328,24 @@
             "c2"
           ],
           "props": [],
-          "images": []
+          "images": [
+            {
+              "src": "images/scenes/1795065480051-qsnuc8z.jpg",
+              "cap": "6-1"
+            },
+            {
+              "src": "images/scenes/1795065481355-jkp0sm7.jpg",
+              "cap": "6-2"
+            },
+            {
+              "src": "images/scenes/1795065482733-mix0elb.jpg",
+              "cap": "6-3"
+            },
+            {
+              "src": "images/scenes/1795065484258-px41tis.jpg",
+              "cap": "6-4"
+            }
+          ]
         },
         {
           "id": "s489sct",
@@ -266,7 +359,51 @@
             "c3"
           ],
           "props": [],
-          "images": []
+          "images": [
+            {
+              "src": "images/scenes/1795065535637-oqdrhom.jpg",
+              "cap": "8-1"
+            },
+            {
+              "src": "images/scenes/1795065530532-yamuidf.jpg",
+              "cap": "8-2"
+            },
+            {
+              "src": "images/scenes/1795065531851-mvkwp3t.jpg",
+              "cap": "8-3"
+            },
+            {
+              "src": "images/scenes/1795065533097-v4g8ls5.jpg",
+              "cap": "8-4"
+            },
+            {
+              "src": "images/scenes/1795065534434-isg9trd.jpg",
+              "cap": "8-5"
+            }
+          ]
+        },
+        {
+          "id": "7t02pof",
+          "time": "17:30",
+          "no": "S#5",
+          "title": "주차된 차 (말씀 시간)",
+          "desc": "말씀 듣는 전도대상자",
+          "location": "3층 소강당",
+          "cast": [
+            "c1",
+            "c2"
+          ],
+          "props": [],
+          "images": [
+            {
+              "src": "images/scenes/1795065442403-7usbjyr.jpg",
+              "cap": "5-1"
+            },
+            {
+              "src": "images/scenes/1795065413231-47t3tob.jpg",
+              "cap": "5-2"
+            }
+          ]
         }
       ],
       "supplies": [
