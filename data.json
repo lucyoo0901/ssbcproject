@@ -14,28 +14,118 @@
       "id": "c3",
       "role": "전도대상자2",
       "name": "공민주"
+    },
+    {
+      "id": "h3d3owb",
+      "role": "진상",
+      "name": "김명찬"
+    },
+    {
+      "id": "y73qic9",
+      "role": "대장",
+      "name": "박문권"
+    },
+    {
+      "id": "gmbnk1k",
+      "role": "일꾼1",
+      "name": "김재영"
+    },
+    {
+      "id": "nbbmnt6",
+      "role": "일꾼2",
+      "name": "최유신"
+    },
+    {
+      "id": "2f20hrl",
+      "role": "일꾼3",
+      "name": "이승형"
+    },
+    {
+      "id": "eyur6f3",
+      "role": "일꾼4",
+      "name": "김지후"
+    },
+    {
+      "id": "jg0sjz0",
+      "role": "일꾼5",
+      "name": "최유성"
+    },
+    {
+      "id": "gekser6",
+      "role": "일꾼6",
+      "name": "정재헌"
+    },
+    {
+      "id": "clnsmst",
+      "role": "일꾼7",
+      "name": "염선우"
+    },
+    {
+      "id": "og8w1kt",
+      "role": "기타일꾼1",
+      "name": "김예성"
+    },
+    {
+      "id": "sht50jc",
+      "role": "기타일꾼2",
+      "name": "연성민"
+    },
+    {
+      "id": "x6ybogr",
+      "role": "기타일꾼3",
+      "name": "최준이"
+    },
+    {
+      "id": "f92wpuo",
+      "role": "나레이션",
+      "name": "정혜성"
     }
   ],
   "staff": [
     {
       "id": "s1",
-      "role": "감독",
-      "name": "스태프A"
+      "role": "촬영",
+      "name": "김예지"
     },
     {
       "id": "s2",
       "role": "촬영",
-      "name": "스태프B"
+      "name": "김나영"
     },
     {
       "id": "s3",
-      "role": "음향",
-      "name": "스태프C"
+      "role": "촬영",
+      "name": "윤석온"
     },
     {
       "id": "s4",
       "role": "편집",
-      "name": "스태프D"
+      "name": "유영진"
+    },
+    {
+      "id": "koco5ci",
+      "role": "보조",
+      "name": "손종현"
+    },
+    {
+      "id": "9kegp5a",
+      "role": "보조",
+      "name": "정혜성"
+    },
+    {
+      "id": "4bcpuyd",
+      "role": "보조",
+      "name": "송민규"
+    },
+    {
+      "id": "gzc2ylr",
+      "role": "보조",
+      "name": "정동진"
+    },
+    {
+      "id": "9engu74",
+      "role": "보조",
+      "name": "김명준"
     }
   ],
   "events": [
@@ -43,13 +133,14 @@
       "id": "e1",
       "date": "2026-11-22",
       "type": "촬영",
-      "title": "1차 본촬영 (예시)",
+      "title": "촬영 1",
       "start": "13:00",
       "end": "17:00",
-      "location": "본당 로비",
+      "location": "서울서부교회당",
       "people": [
         "c1",
         "c2",
+        "c3",
         "s1",
         "s2",
         "s3"
@@ -171,13 +262,11 @@
       "id": "e3",
       "date": "2026-12-06",
       "type": "촬영",
-      "title": "2차 촬영 (예시)",
+      "title": "촬영 4 (필요시)",
       "start": "14:00",
       "end": "18:00",
-      "location": "교육관 3층",
+      "location": "서울서부 교회당",
       "people": [
-        "c1",
-        "c3",
         "s1",
         "s2"
       ],
