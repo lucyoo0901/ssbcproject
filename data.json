@@ -149,34 +149,51 @@
       "scenes": [
         {
           "id": "sc1",
-          "time": "13:30",
+          "time": "14:00",
           "no": "S#1",
-          "title": "로비에서의 첫 만남",
-          "desc": "예배 후 로비에서 민수와 지은이 처음 인사한다.",
+          "title": "집 앞",
+          "desc": "전도대상자 픽업 및 일꾼 등장",
           "cast": [
             "c1",
             "c2"
           ],
-          "images": [
-            {
-              "src": "images/sample/s1-1.svg",
-              "cap": "와이드 — 로비 전경"
-            },
-            {
-              "src": "images/sample/s1-2.svg",
-              "cap": "미디엄 — 인사"
-            },
-            {
-              "src": "images/sample/s1-3.svg",
-              "cap": "클로즈업"
-            }
-          ],
-          "location": "",
+          "images": [],
+          "location": "연대 기숙사 앞",
           "props": [
             {
               "id": "i4",
-              "name": "주보 10부",
-              "owner": "",
+              "name": "차량",
+              "owner": "김명준",
+              "done": false
+            },
+            {
+              "id": "gbg5rme",
+              "name": "차량",
+              "owner": "손종현",
+              "done": false
+            },
+            {
+              "id": "qa2rkdm",
+              "name": "카메라",
+              "owner": "미선부",
+              "done": false
+            },
+            {
+              "id": "xvaenqe",
+              "name": "카메라",
+              "owner": "정혜성",
+              "done": false
+            },
+            {
+              "id": "jhjn1en",
+              "name": "짐벌",
+              "owner": "정혜성",
+              "done": false
+            },
+            {
+              "id": "k230uqz",
+              "name": "초록배경",
+              "owner": "미선부",
               "done": false
             }
           ]
