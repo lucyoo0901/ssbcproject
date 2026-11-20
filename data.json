@@ -366,31 +366,6 @@
           "items": [
             "it-1jjji5l"
           ]
-        },
-        {
-          "id": "7t02pof",
-          "time": "17:30",
-          "no": "S#5",
-          "title": "주차된 차 (말씀 시간)",
-          "desc": "말씀 듣는 전도대상자",
-          "cast": [
-            "c1",
-            "c2"
-          ],
-          "images": [
-            {
-              "src": "images/scenes/1795065442403-7usbjyr.jpg",
-              "cap": "5-1"
-            },
-            {
-              "src": "images/scenes/1795065413231-47t3tob.jpg",
-              "cap": "5-2"
-            }
-          ],
-          "locationId": "loc-bolgg3",
-          "items": [
-            "it-1jxrtdp"
-          ]
         }
       ],
       "done": {},
@@ -419,7 +394,107 @@
       ],
       "extra": "",
       "memo": "",
-      "scenes": [],
+      "scenes": [
+        {
+          "id": "kdvw5oq",
+          "time": "11:30",
+          "no": "S#8",
+          "title": "다시 교회 (결말)",
+          "desc": "새로운 전도",
+          "locationId": "loc-1gq9qw1",
+          "cast": [
+            "gmbnk1k",
+            "nbbmnt6",
+            "2f20hrl",
+            "eyur6f3",
+            "jg0sjz0",
+            "gekser6",
+            "clnsmst",
+            "og8w1kt",
+            "sht50jc",
+            "x6ybogr",
+            "f92wpuo"
+          ],
+          "items": [
+            "it-1jjji5l"
+          ],
+          "images": [
+            {
+              "src": "images/scenes/1795074064578-6s3ri9f.jpg",
+              "cap": "8-6"
+            },
+            {
+              "src": "images/scenes/1795074065740-o024z60.jpg",
+              "cap": "8-7"
+            },
+            {
+              "src": "images/scenes/1795074067067-g6fp8lv.jpg",
+              "cap": "8-8"
+            },
+            {
+              "src": "images/scenes/1795074069604-p4mw4yb.jpg",
+              "cap": "8-9"
+            },
+            {
+              "src": "images/scenes/1795074070777-o6hvrix.jpg",
+              "cap": "8-10"
+            },
+            {
+              "src": "images/scenes/1795074072235-vjpgelj.jpg",
+              "cap": "8-11"
+            },
+            {
+              "src": "images/scenes/1795074068328-i9m1hdl.jpg",
+              "cap": "8-12"
+            },
+            {
+              "src": "images/scenes/1795074073572-s4wcim4.jpg",
+              "cap": "8-13"
+            },
+            {
+              "src": "images/scenes/1795074074917-ha9gh5g.jpg",
+              "cap": "8-14"
+            },
+            {
+              "src": "images/scenes/1795074076021-0zh6i3z.jpg",
+              "cap": "8-15"
+            }
+          ]
+        },
+        {
+          "id": "s4rsb26",
+          "time": "12:30",
+          "no": "S#10",
+          "title": "상암교회 부지 (에필로그)",
+          "desc": "다음 더 큰 전도를 앞둔 우리",
+          "locationId": "srgfivm",
+          "cast": [
+            "y73qic9",
+            "gmbnk1k",
+            "nbbmnt6",
+            "2f20hrl",
+            "eyur6f3",
+            "jg0sjz0",
+            "gekser6",
+            "clnsmst",
+            "og8w1kt",
+            "sht50jc",
+            "x6ybogr",
+            "f92wpuo"
+          ],
+          "items": [],
+          "images": [
+            {
+              "src": "images/scenes/1795074211592-fviaahg.jpg",
+              "cap": "10-1"
+            },
+            {
+              "src": "images/scenes/1795074213039-1iyz3f9.jpg",
+              "cap": "10-2"
+            }
+          ]
+        }
+      ],
       "done": {},
       "locationId": "loc-deyym0",
       "items": []
@@ -782,14 +857,6 @@
               "cap": "4-9"
             },
             {
-              "src": "images/scenes/1795072962421-gxa5aw6.jpg",
-              "cap": "4-29"
-            },
-            {
-              "src": "images/scenes/1795072963617-zb4y44z.jpg",
-              "cap": "4-29"
-            },
-            {
               "src": "images/scenes/1795072977554-euhlqfs.jpg",
               "cap": "4-13"
             },
@@ -878,7 +945,15 @@
             {
               "src": "images/scenes/1795073439835-oohghbl.jpg",
               "cap": "4-26"
-            }
+            },
+            {
+              "src": "images/scenes/1795072962421-gxa5aw6.jpg",
+              "cap": "4-29"
+            },
+            {
+              "src": "images/scenes/1795072963617-zb4y44z.jpg",
+              "cap": "4-29"
+            },
           ]
         },
         {
@@ -949,105 +1024,6 @@
               "cap": "6-14"
             }
           ]
-        },
-        {
-          "id": "kdvw5oq",
-          "time": "11:30",
-          "no": "S#8",
-          "title": "다시 교회 (결말)",
-          "desc": "새로운 전도",
-          "locationId": "loc-1gq9qw1",
-          "cast": [
-            "gmbnk1k",
-            "nbbmnt6",
-            "2f20hrl",
-            "eyur6f3",
-            "jg0sjz0",
-            "gekser6",
-            "clnsmst",
-            "og8w1kt",
-            "sht50jc",
-            "x6ybogr",
-            "f92wpuo"
-          ],
-          "items": [
-            "it-1jjji5l"
-          ],
-          "images": [
-            {
-              "src": "images/scenes/1795074064578-6s3ri9f.jpg",
-              "cap": "8-6"
-            },
-            {
-              "src": "images/scenes/1795074065740-o024z60.jpg",
-              "cap": "8-7"
-            },
-            {
-              "src": "images/scenes/1795074067067-g6fp8lv.jpg",
-              "cap": "8-8"
-            },
-            {
-              "src": "images/scenes/1795074069604-p4mw4yb.jpg",
-              "cap": "8-9"
-            },
-            {
-              "src": "images/scenes/1795074070777-o6hvrix.jpg",
-              "cap": "8-10"
-            },
-            {
-              "src": "images/scenes/1795074072235-vjpgelj.jpg",
-              "cap": "8-11"
-            },
-            {
-              "src": "images/scenes/1795074068328-i9m1hdl.jpg",
-              "cap": "8-12"
-            },
-            {
-              "src": "images/scenes/1795074073572-s4wcim4.jpg",
-              "cap": "8-13"
-            },
-            {
-              "src": "images/scenes/1795074074917-ha9gh5g.jpg",
-              "cap": "8-14"
-            },
-            {
-              "src": "images/scenes/1795074076021-0zh6i3z.jpg",
-              "cap": "8-15"
-            }
-          ]
-        },
-        {
-          "id": "s4rsb26",
-          "time": "12:30",
-          "no": "S#10",
-          "title": "상암교회 부지 (에필로그)",
-          "desc": "다음 더 큰 전도를 앞둔 우리",
-          "locationId": "srgfivm",
-          "cast": [
-            "y73qic9",
-            "gmbnk1k",
-            "nbbmnt6",
-            "2f20hrl",
-            "eyur6f3",
-            "jg0sjz0",
-            "gekser6",
-            "clnsmst",
-            "og8w1kt",
-            "sht50jc",
-            "x6ybogr",
-            "f92wpuo"
-          ],
-          "items": [],
-          "images": [
-            {
-              "src": "images/scenes/1795074211592-fviaahg.jpg",
-              "cap": "10-1"
-            },
-            {
-              "src": "images/scenes/1795074213039-1iyz3f9.jpg",
-              "cap": "10-2"
-            }
-          ]
         }
       ],
       "done": {},
@@ -1078,14 +1054,40 @@
         "s2"
       ],
       "extra": "전도사님",
-      "memo": "말씀 시간 동안 뒤에서 촬영 + 말씀 끝나고 앞에서 다같이 한번 촬영",
+      "memo": "말씀 시간 동안 뒤에서 촬영, 그리고 말씀 끝나고 앞에서 다같이 정면 촬영",
       "items": [
         "it-30wf7h",
         "it-1tbq2ep",
         "it-1noh68t"
       ],
       "done": {},
-      "scenes": []
+      "scenes": [
+        {
+          "id": "7t02pof",
+          "time": "17:30",
+          "no": "S#5",
+          "title": "주차된 차 (말씀 시간)",
+          "desc": "말씀 듣는 전도대상자",
+          "cast": [
+            "c1",
+            "c2"
+          ],
+          "images": [
+            {
+              "src": "images/scenes/1795065442403-7usbjyr.jpg",
+              "cap": "5-1"
+            },
+            {
+              "src": "images/scenes/1795065413231-47t3tob.jpg",
+              "cap": "5-2"
+            }
+          ],
+          "locationId": "loc-bolgg3",
+          "items": [
+            "it-1jxrtdp"
+          ]
+        }
+      ]
     }
   ],
   "links": {
