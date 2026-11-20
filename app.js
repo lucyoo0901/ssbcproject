@@ -26,7 +26,7 @@ const TYPES = [
 ];
 const HOLIDAYS = { '2026-12-25': '성탄절' };
 const WEEK = ['일', '월', '화', '수', '목', '금', '토'];
-const VIEW_TITLES = { people: '촬영 인원', locations: '촬영 장소', supplies: '준비물', script: '대본', storyboard: '스토리보드' };
+const VIEW_TITLES = { board: '촬영 스케줄', people: '촬영 인원', locations: '촬영 장소', supplies: '준비물', script: '대본', storyboard: '스토리보드' };
 
 /* ---------- 상태 ---------- */
 const state = {
@@ -448,9 +448,10 @@ async function uploadImage(dataUrl, folder = 'scenes') {
 /* ---------- 렌더링 ---------- */
 function render() {
   document.body.classList.toggle('is-admin', state.admin);
+  hideHoverCard();
   renderSide();
   const body = {
-    calendar: calendarHTML, people: peopleHTML, locations: locationsHTML, supplies: suppliesPageHTML,
+    calendar: calendarHTML, board: boardHTML, people: peopleHTML, locations: locationsHTML, supplies: suppliesPageHTML,
     script: () => docHTML('script'), storyboard: () => docHTML('storyboard'),
   }[state.view] || calendarHTML;
   $('#main').innerHTML = topbarHTML() + body();
@@ -726,6 +727,154 @@ function renderLightbox() {
     <button class="lb-arrow right" data-lbi="${st.idx + 1}" aria-label="다음 사진" ${n < 2 ? 'hidden' : ''}>›</button>`;
   lb.classList.add('open');
 }
+
+/* ---------- 촬영 스케줄 (촬영일만 모아 비교) ---------- */
+function boardHTML() {
+  const days = sortedEvents().filter((e) => e.type === '촬영');
+  if (!days.length) {
+    return '<div class="page"><div class="card"><div class="empty">아직 촬영 일정이 없습니다.</div></div></div>';
+  }
+  return `
+    <div class="board-wrap">
+      <p class="board-hint">씬에 마우스를 올리면 등장 배역과 준비물이 보이고, 누르면 콘티가 열립니다. 🚚는 장소 이동, ↩는 이미 갔던 장소로 다시 돌아가는 곳입니다.</p>
+      <div class="board">${days.map(dayColHTML).join('')}</div>
+    </div>`;
+}
+
+function dayColHTML(e) {
+  const scenes = sortScenes(e);
+  const seen = new Set();
+  let prevLoc = null;
+  let moves = 0;
+  let revisits = 0;
+  let body = '';
+  scenes.forEach((s, i) => {
+    const lid = sceneLocId(e, s) || '';
+    if (i === 0 || lid !== prevLoc) {
+      const revisit = i > 0 && lid && seen.has(lid);
+      if (i > 0) moves++;
+      if (revisit) revisits++;
+      body += `
+        <div class="b-loc ${i > 0 ? 'move' : ''} ${revisit ? 'revisit' : ''}">
+          ${i > 0 ? '<span class="b-move" aria-label="장소 이동">🚚</span>' : ''}
+          ${lid ? locLink(lid) : '<span class="hint">장소 미정</span>'}
+          ${revisit ? '<span class="b-warn">↩ 재방문</span>' : ''}
+        </div>`;
+      seen.add(lid);
+      prevLoc = lid;
+    }
+    body += sceneRowHTML(e, s);
+  });
+  const cuts = scenes.reduce((n, s) => n + s.images.length, 0);
+  const castOrder = [];
+  scenes.forEach((s) => s.cast.forEach((id) => { if (!castOrder.includes(id)) castOrder.push(id); }));
+  return `
+    <section class="bcol">
+      <header class="bcol-head">
+        <button class="date-chip" data-goto="${e.date}">${fmtShort(e.date)} (${WEEK[parseKey(e.date).getDay()]})</button>
+        <h2>${esc(e.title || '촬영')}</h2>
+        <div class="bcol-time">${esc(e.start)}${e.end ? ` – ${esc(e.end)}` : ''}</div>
+        <div class="bstats">
+          <span>씬 <b>${scenes.length}</b></span>
+          <span>컷 <b>${cuts}</b></span>
+          <span>장소 이동 <b>${moves}</b>회</span>
+          <span>배역 <b>${castOrder.length}</b>명</span>
+        </div>
+        ${revisits ? `<div class="b-alert">↩ 이미 갔던 장소로 ${revisits}번 돌아갑니다. 씬 순서를 조정하면 이동을 줄일 수 있습니다.</div>` : ''}
+      </header>
+      <div class="bcol-body">${scenes.length ? body : '<div class="empty sm">등록된 씬이 없습니다.</div>'}</div>
+      ${castOrder.length ? castGridHTML(scenes, castOrder) : ''}
+    </section>`;
+}
+
+function sceneRowHTML(e, s) {
+  const cast = s.cast.map(findPerson).filter(Boolean);
+  const items = s.items.map(findCat).filter(Boolean);
+  const loc = findLoc(sceneLocId(e, s));
+  return `
+    <div class="srow" data-srow="${e.id}|${s.id}" tabindex="0" role="button" aria-label="${esc(s.no)} ${esc(s.title)}, 등장 배역 ${cast.length}명, 준비물 ${items.length}개">
+      <span class="s-time">${esc(s.time || '')}</span>
+      <span class="s-no">${esc(s.no || '')}</span>
+      <span class="sr-title">${esc(s.title || '제목 없음')}</span>
+      <span class="sr-cuts" title="컷 ${s.images.length}개">🎞 ${s.images.length}</span>
+      <div class="sdetail">
+        <div class="hc-head"><b>${esc(s.no)} ${esc(s.title)}</b><span>${esc(s.time || '')}${loc ? ` · 📍 ${esc(loc.name)}` : ''} · 컷 ${s.images.length}</span></div>
+        ${s.desc ? `<p class="hc-desc">${esc(s.desc)}</p>` : ''}
+        <div class="hc-sec">
+          <div class="hc-k">등장 배역 ${cast.length}</div>
+          ${cast.length ? `<ul class="hc-list">${cast.map((p) => `<li><b>${esc(p.role)}</b><span>${esc(p.name || '미정')}</span></li>`).join('')}</ul>` : '<div class="hint">없음</div>'}
+        </div>
+        <div class="hc-sec">
+          <div class="hc-k">준비물 ${items.length}</div>
+          ${items.length ? `<ul class="hc-list">${items.map((it) => `<li><b>${esc(it.name)}</b><span>${esc(it.owner || '')}</span></li>`).join('')}</ul>` : '<div class="hint">없음</div>'}
+        </div>
+        <button class="mini hc-open" data-scene="${e.id}|${s.id}">콘티 보기 ›</button>
+      </div>
+    </div>`;
+}
+
+/* 배역 등장표: 누가 어느 씬에 나오는지, 첫 씬부터 마지막 씬까지 얼마나 머무는지 */
+function castGridHTML(scenes, castOrder) {
+  return `
+    <details class="cast-grid" open>
+      <summary>배역 등장 순서</summary>
+      <div class="table-wrap"><table>
+        <thead><tr><th>배역</th>${scenes.map((s) => `<th title="${esc(s.title)}">${esc((s.no || '').replace(/^S#/, ''))}</th>`).join('')}<th>머무는 시간</th></tr></thead>
+        <tbody>${castOrder.map((id) => {
+          const p = findPerson(id);
+          if (!p) return '';
+          const idx = scenes.map((s, i) => (s.cast.includes(id) ? i : -1)).filter((i) => i >= 0);
+          const first = idx[0];
+          const last = idx[idx.length - 1];
+          const lastScene = scenes[last];
+          const span = `${esc(scenes[first].time)}–${esc(lastScene.time)}`;
+          const gaps = last - first + 1 - idx.length;
+          return `<tr>
+            <td class="cg-name"><b>${esc(p.role)}</b><small>${esc(p.name)}</small></td>
+            ${scenes.map((s, i) => `<td class="${s.cast.includes(id) ? 'on' : i > first && i < last ? 'wait' : ''}">${s.cast.includes(id) ? '●' : ''}</td>`).join('')}
+            <td class="cg-span">${span}<small>${idx.length}씬${gaps ? ` · 대기 ${gaps}씬` : ''}</small></td>
+          </tr>`;
+        }).join('')}</tbody>
+      </table></div>
+      <p class="hint">● 출연 · 옅은 칸은 첫 출연과 마지막 출연 사이에 기다리는 씬입니다.</p>
+    </details>`;
+}
+
+/* 마우스를 올리면 뜨는 상세 카드 */
+const canHover = () => window.matchMedia('(hover: hover)').matches;
+function showHoverCard(row) {
+  const hc = $('#hovercard');
+  if (hc.dataset.for === row.dataset.srow) return;
+  hc.innerHTML = $('.sdetail', row).innerHTML;
+  hc.dataset.for = row.dataset.srow;
+  hc.classList.add('show');
+  const r = row.getBoundingClientRect();
+  const w = hc.offsetWidth;
+  const h = hc.offsetHeight;
+  let x = r.right + 10;
+  if (x + w > innerWidth - 8) x = r.left - w - 10;
+  if (x < 8) x = Math.max(8, Math.min(r.left, innerWidth - w - 8));
+  const y = Math.max(8, Math.min(r.top - 8, innerHeight - h - 8));
+  hc.style.left = `${x}px`;
+  hc.style.top = `${y}px`;
+}
+function hideHoverCard() {
+  const hc = $('#hovercard');
+  hc.classList.remove('show');
+  hc.dataset.for = '';
+}
+document.addEventListener('mouseover', (e) => {
+  if (!canHover()) return;
+  const row = e.target.closest?.('[data-srow]');
+  if (row) showHoverCard(row);
+});
+document.addEventListener('mouseout', (e) => {
+  const row = e.target.closest?.('[data-srow]');
+  if (row && !row.contains(e.relatedTarget)) hideHoverCard();
+});
+document.addEventListener('focusin', (e) => { if (e.target.matches?.('[data-srow]') && canHover()) showHoverCard(e.target); });
+document.addEventListener('focusout', (e) => { if (e.target.matches?.('[data-srow]')) hideHoverCard(); });
+document.addEventListener('scroll', hideHoverCard, true);
 
 /* ---------- 메뉴 화면들 ---------- */
 function peopleHTML() {
@@ -1251,9 +1400,20 @@ function keepScrollRender() {
 }
 
 document.addEventListener('click', async (e) => {
-  const t = e.target.closest('[data-act],[data-add],[data-edit-ev],[data-del-ev],[data-add-scene],[data-edit-scene],[data-scene],[data-vjump],[data-vscene],[data-goto],[data-view],[data-add-p],[data-del-p],[data-toggle],[data-loc],[data-edit-loc],[data-lb],[data-lbi],[data-suptab],[data-del-it],[data-new-item],[data-new-loc],[data-day]');
+  const t = e.target.closest('[data-act],[data-add],[data-edit-ev],[data-del-ev],[data-add-scene],[data-edit-scene],[data-scene],[data-vjump],[data-vscene],[data-goto],[data-view],[data-add-p],[data-del-p],[data-toggle],[data-loc],[data-edit-loc],[data-lb],[data-lbi],[data-suptab],[data-del-it],[data-new-item],[data-new-loc],[data-srow],[data-day]');
   if (!t) return;
   const d = t.dataset;
+
+  if (d.srow) {
+    hideHoverCard();
+    if (canHover()) {
+      const [a, b] = d.srow.split('|');
+      openViewer({ kind: 'scene', evId: a, sceneId: b });
+    } else {
+      t.classList.toggle('open'); // 휴대폰: 눌러서 펼치기
+    }
+    return;
+  }
 
   if (d.act) {
     switch (d.act) {
@@ -1418,6 +1578,10 @@ document.addEventListener('keydown', (e) => {
   if ((e.key === 'Enter' || e.key === ' ') && e.target.matches?.('[data-day]')) {
     e.preventDefault();
     openDay(e.target.dataset.day);
+  }
+  if ((e.key === 'Enter' || e.key === ' ') && e.target.matches?.('[data-srow]')) {
+    e.preventDefault();
+    e.target.click();
   }
 });
 
