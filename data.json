@@ -1164,6 +1164,30 @@
         "nq7tb7e",
         "9ihj4ir"
       ]
+    },
+    {
+      "id": "tes2xam",
+      "date": "2026-11-21",
+      "type": "촬영",
+      "title": "촬영 0",
+      "start": "08:00",
+      "end": "20:20",
+      "locationId": "loc-bolgg3",
+      "people": [
+        "c1",
+        "c2",
+        "s1",
+        "s2"
+      ],
+      "extra": "전도사님",
+      "memo": "말씀 시간 동안 뒤에서 촬영 + 말씀 끝나고 앞에서 다같이 한번 촬영",
+      "items": [
+        "it-30wf7h",
+        "it-1tbq2ep",
+        "it-1noh68t"
+      ],
+      "done": {},
+      "scenes": []
     }
   ],
   "links": {
