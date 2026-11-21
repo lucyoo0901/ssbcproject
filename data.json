@@ -197,7 +197,7 @@
               "cap": "1-9"
             }
           ],
-          "locationId": "loc-jjzlm6",
+          "locationId": "loc-1gq9qw1",
           "items": [
             "it-1jxrtdp"
           ]
@@ -226,14 +226,14 @@
               "cap": "2-27"
             }
           ],
-          "locationId": "loc-jjzlm6",
+          "locationId": "loc-1gq9qw1",
           "items": [
             "it-1jxrtdp"
           ]
         },
         {
           "id": "wkvijzo",
-          "time": "15:30",
+          "time": "16:30",
           "no": "S#3",
           "title": "주행",
           "desc": "차가 잘나가",
@@ -262,7 +262,7 @@
         },
         {
           "id": "vlqjycm",
-          "time": "16:00",
+          "time": "17:00",
           "no": "S#4",
           "title": "도로 (급커브 / 제동 구간)",
           "desc": "경사가 심하다...",
@@ -299,7 +299,7 @@
         },
         {
           "id": "8qkdl6l",
-          "time": "16:30",
+          "time": "16:00",
           "no": "S#6",
           "title": "다음날 다시 도로 (깡패 만남)",
           "desc": "집회 소감",
@@ -332,7 +332,7 @@
         },
         {
           "id": "s489sct",
-          "time": "17:00",
+          "time": "15:30",
           "no": "S#8",
           "title": "다시 교회 (결말)",
           "desc": "새로운 전도",
@@ -362,7 +362,7 @@
               "cap": "8-5"
             }
           ],
-          "locationId": "loc-1gq9qw1",
+          "locationId": "91yaun5",
           "items": [
             "it-1jjji5l"
           ]
@@ -417,7 +417,7 @@
           "no": "S#8",
           "title": "다시 교회 (결말)",
           "desc": "새로운 전도",
-          "locationId": "loc-1gq9qw1",
+          "locationId": "91yaun5",
           "cast": [
             "gmbnk1k",
             "nbbmnt6",
@@ -581,7 +581,7 @@
           "id": "l1ww2iw",
           "time": "20:30",
           "no": "S#7",
-          "title": "최후의 순간 (교회 앞에서 촬영)",
+          "title": "최후의 순간",
           "desc": "이제 남아있는 기름 대원은 단 몇 명뿐. 대장은 몸이 약해지며 말이 없어졌다",
           "locationId": "",
           "cast": [
@@ -684,11 +684,11 @@
       "scenes": [
         {
           "id": "4rlsb68",
-          "time": "07:00",
+          "time": "11:00",
           "no": "S#1",
           "title": "집 앞",
           "desc": "일꾼들 등장",
-          "locationId": "loc-jjzlm6",
+          "locationId": "loc-1gq9qw1",
           "cast": [
             "y73qic9",
             "gmbnk1k",
@@ -848,7 +848,7 @@
         },
         {
           "id": "eg01lnw",
-          "time": "10:30",
+          "time": "10:00",
           "no": "S#4-2",
           "title": "도로 (급커브 / 제동 구간)",
           "desc": "일꾼 사라짐 구간",
@@ -926,7 +926,7 @@
         },
         {
           "id": "ds76hiv",
-          "time": "08:30",
+          "time": "09:00",
           "no": "S#4-1",
           "title": "도로 (급커브 / 제동 구간)",
           "desc": "급커브 / 제동 구간",
@@ -976,7 +976,7 @@
         },
         {
           "id": "8fjojpk",
-          "time": "09:30",
+          "time": "07:00",
           "no": "S#6",
           "title": "다음날 다시 도로 (깡패 만남)",
           "desc": "깡패 만남",
@@ -1116,47 +1116,128 @@
     {
       "id": "loc-deyym0",
       "name": "서울서부교회당",
-      "address": "",
+      "address": "서울 서대문구 연희로10길 79-12",
       "lat": "",
       "lng": "",
-      "memo": "",
-      "photos": []
+      "memo": "교회앞, 주차장 촬영",
+      "photos": [
+        {
+          "src": "images/locations/1795243704170-md5q3z3.jpg",
+          "cap": "교회앞"
+        },
+        {
+          "src": "images/locations/1795243707431-yokosjl.jpg",
+          "cap": "주차장"
+        }
+      ]
     },
     {
       "id": "loc-jjzlm6",
       "name": "연대 기숙사 앞",
-      "address": "",
-      "lat": "",
-      "lng": "",
-      "memo": "",
-      "photos": []
+      "address": "서울 서대문구 연세로 50",
+      "lat": "37.5734088",
+      "lng": "126.9396520",
+      "memo": "전도대상자1 집 (옵션)",
+      "photos": [
+        {
+          "src": "images/locations/1795243498135-0a253yi.jpg",
+          "cap": "무악3학사"
+        },
+        {
+          "src": "images/locations/1795243500898-nj3xgxi.jpg",
+          "cap": "무악3학사"
+        },
+        {
+          "src": "images/locations/1795243503652-juyywlq.jpg",
+          "cap": "무악3학사"
+        },
+        {
+          "src": "images/locations/1795243506445-0ocd21t.jpg",
+          "cap": "무악3학사"
+        },
+        {
+          "src": "images/locations/1795243523721-it6u9uy.jpg",
+          "cap": "무악4학사"
+        },
+        {
+          "src": "images/locations/1795243526630-v8xm6lp.jpg",
+          "cap": "무악4학사"
+        },
+        {
+          "src": "images/locations/1795243529190-bbvp143.jpg",
+          "cap": "무악4학사"
+        }
+      ]
     },
     {
       "id": "loc-v8twxs",
       "name": "연대 기숙사 방향 거리",
-      "address": "",
-      "lat": "",
-      "lng": "",
-      "memo": "",
-      "photos": []
+      "address": "서울특별시 서대문구 연세로 50",
+      "lat": "37.5708110",
+      "lng": "126.9406793",
+      "memo": "주행, 급정지, 코너링 촬영",
+      "photos": [
+        {
+          "src": "images/locations/1795243190309-8xduefi.jpg",
+          "cap": "급정지"
+        },
+        {
+          "src": "images/locations/1795243182749-xq91y7c.jpg",
+          "cap": "급정지"
+        },
+        {
+          "src": "images/locations/1795243187029-39v8cbq.jpg",
+          "cap": "주행"
+        },
+        {
+          "src": "images/locations/1795243192774-eczi4ug.jpg",
+          "cap": "주행"
+        },
+        {
+          "src": "images/locations/1795243195453-9qcak4k.jpg",
+          "cap": "경사로"
+        },
+        {
+          "src": "images/locations/1795243198628-7imt8n1.jpg",
+          "cap": "경사로"
+        }
+      ]
     },
     {
       "id": "loc-1w7ow62",
       "name": "연희교차로 방향 미용실 앞",
-      "address": "",
+      "address": "서울 서대문구 연희로8길 28",
       "lat": "",
       "lng": "",
-      "memo": "",
-      "photos": []
+      "memo": "진상 촬영 장소",
+      "photos": [
+        {
+          "src": "images/locations/1795243274985-7hac9bi.jpg",
+          "cap": "진상 진입방향"
+        },
+        {
+          "src": "images/locations/1795243277780-az4dqbb.jpg",
+          "cap": "운전자 진입방향"
+        },
+        {
+          "src": "images/locations/1795243280537-eg6pkaa.jpg",
+          "cap": "양보로 빠지는 곳"
+        }
+      ]
     },
     {
       "id": "loc-1gq9qw1",
-      "name": "서울서부 근처 빌라 건물",
-      "address": "",
+      "name": "서울서부 근처 빌라 건물1",
+      "address": "서울 서대문구 연희로10길 79-20",
       "lat": "",
       "lng": "",
-      "memo": "",
-      "photos": []
+      "memo": "전도대상자 1 집앞",
+      "photos": [
+        {
+          "src": "images/locations/1795242806559-40nfbjx.jpg",
+          "cap": ""
+        }
+      ]
     },
     {
       "id": "loc-bolgg3",
@@ -1170,11 +1251,24 @@
     {
       "id": "pc4djpr",
       "name": "교회 앞 경사로",
-      "address": "",
-      "lat": "",
-      "lng": "",
-      "memo": "",
-      "photos": []
+      "address": "서울 서대문구 연희로10길 79-12",
+      "lat": "37.5640482",
+      "lng": "126.9335661",
+      "memo": "형제 사라짐 씬 촬영, 오르막(옵션)",
+      "photos": [
+        {
+          "src": "images/locations/1795243952989-xhjawgw.jpg",
+          "cap": ""
+        },
+        {
+          "src": "images/locations/1795243955729-ycy8y17.jpg",
+          "cap": ""
+        },
+        {
+          "src": "images/locations/1795243947412-i7zw09i.jpg",
+          "cap": ""
+        }
+      ]
     },
     {
       "id": "srgfivm",
@@ -1184,6 +1278,20 @@
       "lng": "",
       "memo": "",
       "photos": []
+    },
+    {
+      "id": "91yaun5",
+      "name": "서울서부 근처 빌라 건물2",
+      "address": "서울 서대문구 연희로10길 79-31 풀하우스",
+      "lat": "",
+      "lng": "",
+      "memo": "전도대상자2 집",
+      "photos": [
+        {
+          "src": "images/locations/1795242880428-7dlfct4.jpg",
+          "cap": ""
+        }
+      ]
     }
   ],
   "items": [
